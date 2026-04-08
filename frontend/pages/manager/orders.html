@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення (Менеджер)</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+
+            <div class="nav-right">
+                <nav>
+                    <a href="dashboard.html">Головна</a>
+                    <a href="#">Замовлення</a>
+                </nav>
+
+                <button id="authBtn">Увійти</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Замовлення</h1>
+        <div style="margin-bottom: 20px;">
+            <select id="statusFilter">
+                <option value="all">Всі</option>
+                <option value="new">Нові</option>
+                <option value="processing">В обробці</option>
+                <option value="done">Завершені</option>
+            </select>
+
+            <button onclick="applyFilter()">Фільтрувати</button>
+        </div>
+        <div class="manager-orders-wrapper">
+            <div id="orders" class="manager-orders-grid"></div>
+        </div>
+        <div class="manager-report">
+            <h2>Звіт про продажі</h2>
+            <div id="report"></div>
+        </div>
+    </main>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/manager.js"></script>
+
+</body>
+
+</html>

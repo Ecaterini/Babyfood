@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2>Вхід</h2>
+
+        <form id="loginForm" onsubmit="login(event)">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Пароль" required />
+
+            <button type="submit">Увійти</button>
+            <p style="margin-top:10px;">
+                Немає акаунта?
+                <a href="register.html">Зареєструватись</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/auth.js"></script>
+</body>
+
+</html>

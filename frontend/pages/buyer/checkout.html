@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Оформлення</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Пошук..." />
+                <button onclick="searchProducts()">Знайти</button>
+            </div>
+
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#">Контакти</a>
+                    <a href="orders.html">Мої замовлення</a>
+                </nav>
+
+                <div class="cart">
+                    <a href="cart.html">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+                <button>Увійти</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Оформлення замовлення</h1>
+
+        <h3>Ваше замовлення:</h3>
+
+        <div id="orderItems"></div>
+
+        <h2 id="total">Разом: 0 грн</h2>
+
+        <form id="orderForm" onsubmit="submitOrder(event)">
+            <input type="text" id="name" placeholder="Ім’я" required />
+            <input type="text" id="phone" placeholder="Телефон" required />
+            <input type="text" id="address" placeholder="Адреса доставки" required />
+
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </main>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/buyer.js"></script>
+
+</body>
+
+</html>

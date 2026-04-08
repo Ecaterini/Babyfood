@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Менеджер</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Головна</a>
+                </nav>
+
+                <button id="authBtn">Увійти</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Панель менеджера</h1>
+
+        <div class="manager-cards">
+
+            <div class="card manager-card" onclick="goToOrders()">
+                <div class="card-content">
+                    <h3>Керування замовленнями</h3>
+                    <p>Перегляд та обробка замовлень</p>
+                </div>
+            </div>
+
+            <div class="card manager-card" onclick="goToProducts()">
+                <div class="card-content">
+                    <h3>Контроль товарів на складі</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../../js/manager.js"></script>
+</body>
+
+</html>

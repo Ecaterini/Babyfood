@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Пошук..." />
+                <button onclick="searchProducts()">Знайти</button>
+            </div>
+
+            <div class="nav-right">
+                <nav>
+                    <a href="../../index.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="#">Контакти</a>
+                    <a href="orders.html">Мої замовлення</a>
+                </nav>
+
+                <div class="cart">
+                    <a href="cart.html">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+                <button>Увійти</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="product"></div>
+    </main>
+
+    <script src="../../js/api.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/buyer.js"></script>
+
+</body>
+
+</html>
