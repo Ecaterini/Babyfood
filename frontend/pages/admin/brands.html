@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Категорії</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <a href="dashboard.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                </nav>
+                <button id="authBtn">Вихід</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>Керування брендами</h1>
+
+        <button onclick="openAddBrand()" class="admin-btn">
+            ➕ Додати бренд
+        </button>
+
+        <div id="addBrandForm" style="display:none; margin-top:15px;">
+            <input type="text" id="newBrandName" placeholder="Назва бренду">
+            <button id="saveBrandBtn">Зберегти</button>
+        </div>
+
+        <div id="brandsList" class="admin-categories"></div>
+    </main>
+    <script src="../../js/admin.js"></script>
+</body>
+
+</html>

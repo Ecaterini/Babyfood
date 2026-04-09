@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Адмін панель</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <a href="#">Головна</a>
+                    <a href="#">Каталог</a>
+                </nav>
+                <button id="authBtn">Вихід</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Панель адміністратора</h1>
+
+        <div class="manager-cards">
+
+            <div class="card manager-card" onclick="goToCatalogAdmin()">
+                <div class="card-content">
+                    <h3>Керування каталогом товарів</h3>
+                    <p>Перегляд, пошук, редагування товарів</p>
+                </div>
+            </div>
+
+            <div class="card manager-card" onclick="goToCategories()">
+                <div class="card-content">
+                    <h3>Керування категоріями</h3>
+                </div>
+            </div>
+
+            <div class="card manager-card" onclick="goToBrands()">
+                <div class="card-content">
+                    <h3>Керування брендами</h3>
+                </div>
+            </div>
+
+            <div class="card manager-card" onclick="goToUsers()">
+                <div class="card-content">
+                    <h3>Керування користувачами</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../../js/admin.js"></script>
+</body>
+
+</html>

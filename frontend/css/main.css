@@ -132,6 +132,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s;
+  padding: 5px;
 }
 
 .card:hover {
@@ -260,4 +261,107 @@ body {
 
 .manager-buttons button:hover {
   background: #85754d;
+}
+/* ADMIN PANEL */
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-actions {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+.admin-image-wrapper {
+  position: relative;
+}
+
+.admin-image-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.change-photo {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+/* ===== ADMIN MODAL ===== */
+
+.admin-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-modal.hidden {
+  display: none;
+}
+
+.admin-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-modal-content input,
+.admin-modal-content select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.admin-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.admin-categories {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #eee;
+  border-radius: 10px;
+}
+
+.admin-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #7a6a4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

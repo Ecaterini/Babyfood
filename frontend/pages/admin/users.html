@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Категорії</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <a href="dashboard.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                </nav>
+                <button id="authBtn">Вихід</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>Керування користувачами</h1>
+        <div class="admin-user-form">
+            <input type="text" id="userName" placeholder="ПІБ">
+            <input type="email" id="userEmail" placeholder="Email">
+            <input type="password" id="userPassword" placeholder="Пароль">
+
+            <select id="userRole">
+                <option value="">Оберіть роль</option>
+                <option value="admin">Адміністратор</option>
+                <option value="manager">Менеджер</option>
+                <option value="buyer">Покупець</option>
+            </select>
+
+            <button id="saveUserBtn">Додати</button>
+        </div>
+        <div id="usersList" class="admin-categories"></div>
+    </main>
+
+    <script src="../../js/admin.js"></script>
+</body>
+
+</html>

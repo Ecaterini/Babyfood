@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог (Адмін)</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../assets/images/лого.png" />
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <a href="dashboard.html">Головна</a>
+                    <a href="catalog.html">Каталог</a>
+                </nav>
+                <button id="authBtn">Вихід</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div style="margin-bottom:20px; display:flex; gap:10px; align-items:center;">
+
+            <select id="categoryFilter">
+                <option value="">Всі категорії</option>
+                <option value="Дитячі суміші">Дитячі суміші</option>
+                <option value="Дитячий прикорм">Дитячий прикорм</option>
+                <option value="Лікувальне харчування">Лікувальне харчування</option>
+            </select>
+
+            <button onclick="applyFilter()">Фільтрувати</button>
+
+            <input type="text" id="searchInput" placeholder="Пошук...">
+            <button onclick="searchProducts()">Знайти</button>
+
+            <button onclick="openAddProduct()">+ Додати товар</button>
+
+        </div>
+        <h1>Керування каталогом</h1>
+
+        <div id="products" class="grid"></div>
+    </main>
+
+    <script src="../../js/buyer.js"></script>
+    <script src="../../js/admin.js"></script>
+    <div id="addProductModal" class="admin-modal hidden">
+        <div class="admin-modal-content">
+            <h3>Новий товар</h3>
+
+            <input id="newName" placeholder="Назва">
+            <input id="newPrice" placeholder="Ціна">
+
+            <select id="newCategory">
+                <option value="">Оберіть категорію</option>
+            </select>
+
+            <div class="admin-modal-actions">
+                <button onclick="addProduct()">Додати</button>
+                <button onclick="closeModal()">Закрити</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

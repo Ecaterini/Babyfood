@@ -14,5 +14,26 @@ router.get('/', async (req, res) => {
         res.status(500).json({ error: 'Database error' });
     }
 });
+// ADD CATEGORY
+router.post('/', (req, res) => {
+    const { category_name } = req.body;
 
+    if (!category_name) {
+        return res.status(400).json({ error: 'Category name required' });
+    }
+
+    const query = `
+        INSERT INTO categories (category_name)
+        VALUES (?)
+    `;
+
+    db.query(query, [category_name], (err) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Database error' });
+        }
+
+        res.json({ message: 'Category added' });
+    });
+});
 module.exports = router;
